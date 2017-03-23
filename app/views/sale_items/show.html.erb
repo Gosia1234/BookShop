@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Saleprice:</strong>
+  <%= @sale_item.salePrice %>
+</p>
+
+<p>
+  <strong>Returned:</strong>
+  <%= @sale_item.returned %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @sale_item.book %>
+</p>
+
+<p>
+  <strong>Sale:</strong>
+  <%= @sale_item.sale %>
+</p>
+
+<%= link_to 'Edit', edit_sale_item_path(@sale_item) %> |
+<%= link_to 'Back', sale_items_path %>

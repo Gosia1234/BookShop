@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  returnDate: 2017-03-23
+  saleItem_id: 
+
+two:
+  returnDate: 2017-03-23
+  saleItem_id: 

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Returns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Returndate</th>
+      <th>Saleitem</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @returns.each do |return| %>
+      <tr>
+        <td><%= return.returnDate %></td>
+        <td><%= return.saleItem %></td>
+        <td><%= link_to 'Show', return %></td>
+        <td><%= link_to 'Edit', edit_return_path(return) %></td>
+        <td><%= link_to 'Destroy', return, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Return', new_return_path %>

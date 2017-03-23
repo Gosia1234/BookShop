@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  salePrice: 9.99
+  returned: false
+  book_id: 
+  sale_id: 
+
+two:
+  salePrice: 9.99
+  returned: false
+  book_id: 
+  sale_id: 

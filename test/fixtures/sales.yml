@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  saleTotal: 9.99
+  qtySold: 1
+  saleDate: 2017-03-23
+  user_id: 
+
+two:
+  saleTotal: 9.99
+  qtySold: 1
+  saleDate: 2017-03-23
+  user_id: 

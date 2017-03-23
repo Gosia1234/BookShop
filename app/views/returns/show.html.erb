@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Returndate:</strong>
+  <%= @return.returnDate %>
+</p>
+
+<p>
+  <strong>Saleitem:</strong>
+  <%= @return.saleItem %>
+</p>
+
+<%= link_to 'Edit', edit_return_path(@return) %> |
+<%= link_to 'Back', returns_path %>
