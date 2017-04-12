@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get '/search' => 'site#search'
   get '/login' => 'site#login'
   get '/register' => 'site#register'
+   get '/admin' => 'user#admin_login'
+  get '/logout' => 'user#logout'
 
   resources :returns
 

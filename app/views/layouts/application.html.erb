@@ -21,8 +21,14 @@
             <li><a href="search.html">Search</a></li>
             <li><a href="about.html">About Us</a></li>            
             <li><a href="contact.html">Contact</a></li>
-             <li><a href="login.html">Log in</a></li>
-              <li><a href="register.html">Register</a></li>
+             <!--<li><a href="login.html">Log in</a></li>-->
+             <!-- <li><a href="register.html">Register</a></li>-->
+                    <li><a href="/admin">Login</a></li>
+                      <% if session[:login] == 1 %>
+        <li><a href="/logout">Logout</a></li>
+         <% else %>
+          <li><a href="/logout">Register</a></li>
+          <% end %>
     	</ul>
     </div> <!-- end of menu -->
     
@@ -86,7 +92,7 @@
         </div> <!-- end of content left -->
         
       <%= yield %>
-      
+       <!--<a href="subpage.html"><img src="/assets/templatemo_ads.jpg" alt="ads" /></a>-->
       <div class="cleaner_with_height">&nbsp;</div>
     </div> <!-- end of content -->
     <div id="templatemo_footer">
