@@ -6,13 +6,11 @@ Rails.application.routes.draw do
   get '/contact' => 'site#contact'
   get '/search' => 'site#search'
   get '/login' => 'site#login'
+  post '/login' => 'user#admin_login'
   get '/register' => 'site#register'
-  get '/Admin' => 'user#admin_login'
+  post '/register' => 'user#register'
   get '/logout' => 'user#logout'
 
-  resources :sale_items
-  
-  
   resources :returns
 
   resources :sale_items

@@ -9,6 +9,7 @@ class SiteController < ApplicationController
   end
 
   def login
+    
   end
 
   def register
