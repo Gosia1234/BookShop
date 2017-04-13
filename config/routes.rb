@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cart/index'
+
   get 'site/about'
 
   get 'site/contact'
@@ -9,11 +11,14 @@ Rails.application.routes.draw do
 
   get 'site/register'
   
+  get 'site/checkout'
+  
   get '/about' => 'site#about'
   get '/contact' => 'site#contact'
   get '/search' => 'site#search'
   get '/login' => 'site#login'
   get '/register' => 'site#register'
+  get '/checkout' => 'site#checkout'
 
   resources :returns
 
@@ -24,6 +29,8 @@ Rails.application.routes.draw do
   resources :books
 
   resources :suppliers
+  
+  resources :checkout
 
   devise_for :admins
   devise_for :users
