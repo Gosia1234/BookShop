@@ -236,15 +236,15 @@ img {
 
 
 #templatemo_content_right .templatemo_product_box {
-	float: left;
-	width: 303px;
+
+	width: 300px;
 	height: 210px;
 	padding: 10px;
 	border: 1px solid #333;
 }
 
 #templatemo_content_right h1 {
-	padding: 10px;
+	padding: 5px;
 	margin: 0 0 20px 0;
 	font-size: 15px;
 	color: #cbc750;
@@ -321,4 +321,19 @@ img {
 	color: #fff;
 	font-weight: normal;
 }
+.fake-button {
+  padding: 0;
+  border: none;
+  display: inline;
+ 	background-color: transparent;
+ 	color: #969547;
+ 		font-size: 14px;
+ 		font-weight:bold;
+ 	
+}
+.templatemo_content_left_section li a:hover, .templatemo_content_left_section li .current.fake-button{
+	color: #fcf88e;
+}
+
+
 /* end of footer */
