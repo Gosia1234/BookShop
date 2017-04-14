@@ -178,7 +178,7 @@ img {
 /* content */
 #templatemo_content {
 	clear: both;
-	width: 920px;
+	width: 900px;
 	padding: 0 20px;
 }
 
@@ -191,8 +191,7 @@ img {
 }
 
 #templatemo_content #templatemo_content_right {
-	float: right;
-	width: 670px;
+	margin-right: 40px;
 }
 
 
@@ -232,15 +231,23 @@ img {
 }
 
 
-
+#templatemo_content_right{
+ 	float: left;
+ 	height: auto;
+ 		width: 300px;
+    
+   
+}
 
 
 #templatemo_content_right .templatemo_product_box {
-
 	width: 300px;
 	height: 210px;
 	padding: 10px;
 	border: 1px solid #333;
+	 display:inline-block;
+	 float: left;
+	 
 }
 
 #templatemo_content_right h1 {

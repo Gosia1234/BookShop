@@ -13,9 +13,7 @@ class BooksController < ApplicationController
     end
   end
   
- def search
-  @books = Book.search(params).order("created_at DESC")
-end
+ 
    
   
   # def index
