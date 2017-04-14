@@ -7,7 +7,7 @@ class UserController < ApplicationController
     puts params[:user][:password]
     session[:login] = 1
     session[:cart] = nil
-    flash[:notice] = "Admin Login Successfull!!"
+    flash[:notice] = "Login Successfull!!"
     redirect_to :controller => :books
     end
 
