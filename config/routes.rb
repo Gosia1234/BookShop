@@ -22,8 +22,6 @@ Rails.application.routes.draw do
   get '/register' => 'site#register'
   get '/cart/:id' => 'cart#add'
   
-  resources :items
-
   resources :returns
 
   resources :sale_items
