@@ -1,35 +1,39 @@
 <p id="notice"><%= notice %></p>
- <% @books.each do |book| %>
-  <div id="templatemo_content_right">
-        	<div class="templatemo_product_box">
-            	<h1> <%=  book.title %>,   <%= book.category %></h1>
-            	 <%= link_to (image_tag book.image, :style => "height:130px"), book %>
-                <div class="product_info">
-                	<p> <%= book.author %></p>
-                  <h3><%= number_to_currency(book.costPrice, :unit => "€") %></h3>
-                   <% if session[:login] == 1 %>
-          <%= link_to 'Edit', edit_book_path(book) %>
-           <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            <div class="detail_button">  <%= link_to 'Details', book %> </div>
-        <% else %>
-           <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div>
-                    <div class="detail_button">  <%= link_to 'Details', book %> </div>
-                   
-        <% end %>
-                  
-                </div>
-                 
-                <div class="cleaner">&nbsp;</div>
-              
-            </div>
-            
-            <div class="cleaner_with_width">&nbsp;</div>
-             
-        </div> <!-- end of content right -->
-        <% end %>
-        
-         <div class="cleaner">&nbsp;</div>
-       
-          <% if session[:login] == 1 %>
- <%= link_to 'New Book', new_book_path %>
+ <% @books.each do |book| %>
+  <div id="templatemo_content_right">
+        	<div class="templatemo_product_box">
+            	<h1> <%=  book.title %>,   <%= book.category %></h1>
+            	 <%= link_to (image_tag book.image, :style => "height:130px"), book %>
+                <div class="product_info">
+                	<p> <%= book.author %></p>
+                  <h3><%= number_to_currency(book.costPrice, :unit => "€") %></h3>
+                   <% if session[:login] == 1 %>
+          <%= link_to 'Edit', edit_book_path(book) %>
+           <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <div class="detail_button">  <%= link_to 'Details', book %> </div>
+        <% else %>
+           <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div>
+                    <div class="detail_button">  <%= link_to 'Details', book %> </div>
+                   
+        <% end %>
+                  
+                </div>
+                 
+                <div class="cleaner">&nbsp;</div>
+              
+            </div>
+            
+            <div class="cleaner_with_width">&nbsp;</div>
+             
+        </div> <!-- end of content right -->
+        <% end %>
+        
+         <div class="cleaner">&nbsp;</div>
+       
+          <% if session[:login] == 1 %>
+ <%= link_to 'New Book', new_book_path %>
 <% end %>
+
+
+       
+

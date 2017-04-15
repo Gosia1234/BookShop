@@ -15,7 +15,11 @@ Rails.application.routes.draw do
   get '/login' => 'site#login'
   post '/login' => 'user#admin_login'
   get '/register' => 'site#register'
+
   post '/register' => 'user#register'
+
+   get '/admin' => 'user#admin_login'
+
   get '/logout' => 'user#logout'
 
   resources :returns

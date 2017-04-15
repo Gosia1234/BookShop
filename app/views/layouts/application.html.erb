@@ -21,10 +21,15 @@
             <li><a href="search.html">Search</a></li>
             <li><a href="about.html">About Us</a></li>            
             <li><a href="contact.html">Contact</a></li>
+
              <li><a href="login.html">Login</a></li>
              <li><a href="logout.html">Logout</a></li>
              <li><a href="register.html">Register</a></li>
     	</ul>
+
+            
+                  
+
     	</ul>
     </div> <!-- end of menu -->
     
@@ -53,16 +58,32 @@
         <div id="templatemo_content_left">
         	<div class="templatemo_content_left_section">
             	<h1>Categories</h1>
+            	
                 <ul>
-                    <li><a href="subpage.html">Donec accumsan urna</a></li>
-                    <li><a href="subpage.html">Proin vulputate justo</a></li>
-                    <li><a href="#">In sed risus ac feli</a></li>
-                    <li><a href="#">Aliquam tristique dolor</a></li>
-                    <li><a href="#">Maece nas metus</a></li>
-                    <li><a href="#">Sed pellentesque placerat</a></li>
-                    <li><a href="#">Suspen disse</a></li>
-                    <li><a href="#">Maece nas metus</a></li>
-                    <li><a href="#">In sed risus ac feli</a></li>
+                    <li>  <%=form_tag(books_path, :method => "get" , id: "search.form") do %>
+                  <%= hidden_field_tag :search ,  'Crime' %>
+                   <%= submit_tag "Crime",class: "fake-button" %>
+                  <% end %>
+                  </li>
+                    <li>  <%=form_tag(books_path, :method => "get" , id: "search.form") do %>
+                  <%= hidden_field_tag :search,'Fantasy'%>
+                   <%= submit_tag "Fantasy",class: "fake-button" %>
+                  <% end %>
+                  </li>
+                   <li>  <%=form_tag(books_path, :method => "get" , id: "search.form") do %>
+                  <%= hidden_field_tag :search,'Biography'%>
+                   <%= submit_tag "Biography",class: "fake-button" %>
+                  <% end %>
+                  </li>
+                    <!--  <a href="subpage.html">Crime</a></li>-->
+                    <!--<li><a href="subpage.html">Fantasy</a></li>-->
+                    <!--<li><a href="#">In sed risus ac feli</a></li>-->
+                    <!--<li><a href="#">Aliquam tristique dolor</a></li>-->
+                    <!--<li><a href="#">Maece nas metus</a></li>-->
+                    <!--<li><a href="#">Sed pellentesque placerat</a></li>-->
+                    <!--<li><a href="#">Suspen disse</a></li>-->
+                    <!--<li><a href="#">Maece nas metus</a></li>-->
+                    <!--<li><a href="#">In sed risus ac feli</a></li>-->
             	</ul>
             </div>
 			<div class="templatemo_content_left_section">
@@ -88,7 +109,7 @@
         </div> <!-- end of content left -->
         
       <%= yield %>
-      
+       <!--<a href="subpage.html"><img src="/assets/templatemo_ads.jpg" alt="ads" /></a>-->
       <div class="cleaner_with_height">&nbsp;</div>
     </div> <!-- end of content -->
     <div id="templatemo_footer">

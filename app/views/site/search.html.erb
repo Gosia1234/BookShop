@@ -1,2 +1,13 @@
-<h1>Site#search</h1>
-<p>Find me in app/views/site/search.html.erb</p>
+<h1>Search For Books</h1>
+<p id="notice"><%= notice %></p>
+
+<%=form_tag(books_path, :method => "get" , id: "search.form") do %>
+  <%= text_field_tag :search, params[:search],:size=> 30, placeholder: " Search Books By Title or Author"%>
+  <%= submit_tag "Search" %>
+  <% end %>
+  
+  
+  
+
+  
+ 
