@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   get 'site/about'
+  
   get 'site/contact'
+  
+  get 'site/search'
+  
+  get 'site/login'
+  
+  get 'site/register'
   
   get '/about' => 'site#about'
   get '/contact' => 'site#contact'
