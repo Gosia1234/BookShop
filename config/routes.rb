@@ -1,20 +1,25 @@
 Rails.application.routes.draw do
   get 'site/about'
-
+  
   get 'site/contact'
-
+  
   get 'site/search'
-
+  
   get 'site/login'
-
+  
   get 'site/register'
   
   get '/about' => 'site#about'
   get '/contact' => 'site#contact'
   get '/search' => 'site#search'
   get '/login' => 'site#login'
+  post '/login' => 'user#admin_login'
   get '/register' => 'site#register'
+
+  post '/register' => 'user#register'
+
    get '/admin' => 'user#admin_login'
+
   get '/logout' => 'user#logout'
 
   resources :returns
@@ -29,6 +34,8 @@ Rails.application.routes.draw do
 
   devise_for :admins
   devise_for :users
+  
+  root 'items#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
