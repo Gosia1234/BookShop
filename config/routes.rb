@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :profiles
+
   get 'site/about'
   
   get 'site/contact'
@@ -15,6 +17,7 @@ Rails.application.routes.draw do
   get '/login' => 'site#login'
   post '/login' => 'user#admin_login'
   get '/register' => 'site#register'
+  get '/signedinuserprofile' => 'profiles#signedinuserprofile'
 
   post '/register' => 'user#register'
 
