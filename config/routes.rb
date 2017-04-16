@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :profiles
+
   get 'site/about'
   
   get 'site/contact'
@@ -13,14 +15,14 @@ Rails.application.routes.draw do
   get '/contact' => 'site#contact'
   get '/search' => 'site#search'
   get '/login' => 'site#login'
+  #get '/admin' => 'user#admin_login'
   post '/login' => 'user#admin_login'
+  get '/logout' => 'user#logout'
+  get '/signedinuserprofile' => 'profiles#signedinuserprofile'
   get '/register' => 'site#register'
-
   post '/register' => 'user#register'
 
-   get '/admin' => 'user#admin_login'
-
-  get '/logout' => 'user#logout'
+  
 
   resources :returns
 
@@ -34,6 +36,7 @@ Rails.application.routes.draw do
 
   devise_for :admins
   devise_for :users
+  
   
   root 'items#index'
   # The priority is based upon order of creation: first created -> highest priority.
