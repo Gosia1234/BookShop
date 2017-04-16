@@ -1,0 +1,34 @@
+<% @items.each do |item| %>
+<tr>
+<td>
+<div class="image">
+<%= link_to (image_tag item.image_url, :style => "height:100px"), item %>
+</div>
+</td>
+<td>
+<div class="title">
+<%= link_to item.title, item %>
+</div>
+<div class="description">
+<%= item.description %>
+</div>
+<div class="price">
+<%= number_to_currency(item.price, :unit => "&pound;") %>
+</div>
+<div class="links">
+<!--% if session[:login] == 1 %-->
+<% if current_user.admin? %>
+<%= link_to 'Edit', edit_item_path(item) %>
+<%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
+<% else %>
+<a href="/cart/<%= item.id %>">Add to Cart</a><br /><br />
+<% end %>
+</div>
+</td>
+</tr>
+<% end %>
+</table>
+<!--% if session[:login] == 1 %-->
+<% if current_user.admin? %>
+<p><%= link_to 'New Item', new_item_path %></p>
+<% end %>
