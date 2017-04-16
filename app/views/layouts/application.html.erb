@@ -42,17 +42,17 @@
                 <span>25%</span> discounts for
         purchase over $80
         	</p>
-			<a href="subpage.html" style="margin-left: 50px;">Read more...</a>
+		
         </div>
         
         
         <div id="templatemo_new_books">
         	<ul>
-                <li>Suspen disse</li>
-                <li>Maece nas metus</li>
-                <li>In sed risus ac feli</li>
+                <li>Game OF Thrones</li>
+                <li>Let The Dead Speak</li>
+                <li>Road Racer</li>
             </ul>
-            <a href="subpage.html" style="margin-left: 50px;">Read more...</a>
+            
         </div>
     </div> <!-- end of header -->
     
@@ -79,31 +79,30 @@
                    <%= submit_tag "Biography",class: "fake-button" %>
                   <% end %>
                   </li>
-                    <!--  <a href="subpage.html">Crime</a></li>-->
-                    <!--<li><a href="subpage.html">Fantasy</a></li>-->
-                    <!--<li><a href="#">In sed risus ac feli</a></li>-->
-                    <!--<li><a href="#">Aliquam tristique dolor</a></li>-->
-                    <!--<li><a href="#">Maece nas metus</a></li>-->
-                    <!--<li><a href="#">Sed pellentesque placerat</a></li>-->
-                    <!--<li><a href="#">Suspen disse</a></li>-->
-                    <!--<li><a href="#">Maece nas metus</a></li>-->
-                    <!--<li><a href="#">In sed risus ac feli</a></li>-->
-
+                  
+                    <li>  <%=form_tag(books_path, :method => "get" , id: "search.form") do %>
+                  <%= hidden_field_tag :search,'Romance'%>
+                   <%= submit_tag "Romance",class: "fake-button" %>
+                  <% end %>
+                  </li>
+                    <li>  <%=form_tag(books_path, :method => "get" , id: "search.form") do %>
+                  <%= hidden_field_tag :search,'Horror'%>
+                   <%= submit_tag "Horror",class: "fake-button" %>
+                  <% end %>
+                  </li>
+                    <li>  <%=form_tag(books_path, :method => "get" , id: "search.form") do %>
+                  <%= hidden_field_tag :search,'Sport'%>
+                   <%= submit_tag "Sport",class: "fake-button" %>
+                  <% end %>
+                  </li>
             	</ul>
             </div>
 			<div class="templatemo_content_left_section">
             	<h1>Bestsellers</h1>
                 <ul>
-                    <li><a href="#">Vestibulum ullamcorper</a></li>
-                    <li><a href="#">Maece nas metus</a></li>
-                    <li><a href="#">In sed risus ac feli</a></li>
-                    <li><a href="#">Praesent mattis varius</a></li>
-                    <li><a href="#">Maece nas metus</a></li>
-                    <li><a href="#">In sed risus ac feli</a></li>
-                    <li><a href="#">Flash Templates</a></li>
-                    <li><a href="#">CSS Templates</a></li>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="http://www.photovaco.com" target="_parent">Free Photos</a></li>
+                     <li>Game OF Thrones</li>
+                <li>Let The Dead Speak</li>
+                <li>Road Racer</li>
             	</ul>
             </div>
             
