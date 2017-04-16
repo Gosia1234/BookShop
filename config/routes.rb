@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+
+  get 'cart/index'
+
+  get 'site/about'
+
   resources :profiles
+
 
   get 'site/about'
   
@@ -11,6 +17,10 @@ Rails.application.routes.draw do
   
   get 'site/register'
   
+  get '/cart' => 'cart#index'
+  get '/cart/clear' => 'cart#clearCart'
+  get '/cart/:id' => 'cart#add'
+  
   get '/about' => 'site#about'
   get '/contact' => 'site#contact'
   get '/search' => 'site#search'
@@ -20,9 +30,14 @@ Rails.application.routes.draw do
   get '/logout' => 'user#logout'
   get '/signedinuserprofile' => 'profiles#signedinuserprofile'
   get '/register' => 'site#register'
+
+  get '/cart/:id' => 'cart#add'
+  
+
   post '/register' => 'user#register'
 
   
+
 
   resources :returns
 
@@ -33,11 +48,13 @@ Rails.application.routes.draw do
   resources :books
 
   resources :suppliers
+  
+  resources :checkout
 
   devise_for :admins
   devise_for :users
   
-  
+
   root 'items#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
