@@ -16,19 +16,19 @@
     </tr>
     
 <% @cart.each do |id,quantity | %>
-<%item = item.find_by_id(id)%>
+<% book = Book.find_by_id(id)%>
 <tr>
     <td>
         <div class="image">
-            <% link_to (Image_tag item.image.url, :style => "height:40px"), item %>
+           
         </div>
     </td>
-    <td class="title"><%= link_to item.title, item %></td>
-    <td class="price"><%= number_to_currency(item.price) %></td>
+    <td class="title"><%= link_to  'book.title', book %></td>
+    <td class="price"><%= number_to_currency(22) %></td>
     <td class="quantity"><%= quantity %> <br /> </td>
-    <td class="price"><%= number_to_currency(quantity * item.price, :unit => "£") %></td>
+    <td class="price"><%= number_to_currency(quantity * 22, :unit => "£") %></td>
 </tr>
-    <% total += quantity * item.price %>
+    <% total += quantity *22 %>
 <% end %>
 <tr>
     <td colspan="4">
@@ -40,7 +40,7 @@
 </tr>
 </table>
 <p>
-    <%= link_to 'Continue Shopping', :controller => :items %>
+    <%= link_to 'Continue Shopping', :controller => :books %>
 </p>
 
 
